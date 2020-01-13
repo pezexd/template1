@@ -1,0 +1,276 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background: rgb(230, 230, 230);
+}
+/* Preloader */
+.pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+  
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+  
+.pace-inactive {
+    display: none;
+}
+  
+.pace .pace-progress {
+    background: #ac23ac;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 2px;
+}  
+
+/* Preloader End */
+
+.header-container {
+    background-image: url('../images/header-background.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+#nav {
+    font-size: 1rem;
+    background: rgba(15, 15, 15, 0.75);
+    padding: 1rem;
+    border-bottom: 1px solid white;
+    color: white;
+    /* flex */
+    display: flex;
+    justify-content: space-between;
+}
+#nav .logo {
+    font-weight: bold;
+}
+#nav .logo a {
+    color: rgb(172, 35, 172);
+    text-decoration: none;
+}
+#nav .fas {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    top: 2px;
+}
+#nav li {
+    display: inline;
+    list-style-type: none;
+}
+#nav li a {
+    margin: 0;
+    background: rgba(15, 15, 15, 0.35);
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    border-bottom: 1px solid white;
+}
+#nav li a:hover {
+    color: rgb(172, 35, 172);
+    border-bottom: 1px solid rgb(172, 35, 172);
+}
+#nav li a:active {
+    color: rgb(172, 35, 172);
+    border-bottom: 1px solid rgb(172, 35, 172);
+}
+
+#header {
+    background: rgba(15, 15, 15, 0.50);
+    color: white;
+    text-align: center;
+    padding: 5%;
+}
+#header h1 {
+    color: rgb(172, 35, 172);
+}
+
+#content {
+    background: rgba(15, 15, 15, 0.25);
+    padding: 5%;
+    text-align: center;
+}
+
+#content2 {
+    padding: 5%;
+    text-align: center;
+}
+#content2 article {
+    margin: 5%;
+}
+#content2 .articlelist li {
+    list-style-type: none;
+}
+
+/*  FEATURES */
+.fcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* CARDS */
+.card {
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    grid-template-columns: 200px;
+    grid-template-rows: 160px 140px;
+    grid-template-areas: "image" "text";
+    border-radius: 18px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    text-align: center;
+    margin: 10px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+.card .card-image {
+    grid-area: image;
+    background: url(../images/cards/card1.jpg);
+    background-size: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.card .card-text {
+    grid-area: text;
+    padding: 10px;
+    background: white;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.card-text p {
+    color: gray;
+    font-size: 13px;
+    font-weight: 400;
+}
+.card .card-image.card2 {
+    grid-area: image;
+    background: url(../images/cards/card2.jpg);
+    background-size: cover;
+}
+.card .card-image.card3 {
+    grid-area: image;
+    background: url(../images/cards/card3.jpg);
+    background-size: cover;
+}
+/* CARDS END */
+
+/* SOCIAL NETWORKS */
+.social .sbuttons {
+    font-size: 3rem;
+    margin: 5px;
+}
+.sbuttons .fa-facebook-f {
+    background: #3b5998;
+    color: white;
+    padding: 15px 30px;
+    transition: 0.5s ease;
+}
+.fa-facebook-f:hover {
+    transform: scale(1.1);
+}
+
+.sbuttons .fa-twitter {
+    background: #00acee;
+    color: white;
+    padding: 15px 30px;
+    transition: 0.5s ease;
+}
+.fa-twitter:hover {
+    transform: scale(1.1);
+}
+
+.sbuttons .fa-instagram {
+    background: rgb(81,93,180);
+    background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    color: white;
+    padding: 15px 30px;
+    transition: 0.5s ease;
+}
+.fa-instagram:hover {
+    transform: scale(1.1);
+}
+/* SOCIAL NETWORKS END */
+
+#footer {
+    background: rgba(15, 15, 15, 0.75);
+    color: white;
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media screen and (max-width:768px){
+    #nav {
+        font-size: 18px;
+        background: rgba(15, 15, 15, 0.75);
+        padding: 0;
+        border-bottom: 1px solid white;
+        color: white;
+        /* flex */
+        display: block;
+        justify-content: normal;
+        align-items: center;
+    }
+    #nav .logo {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        background: rgb(0, 0, 0);
+    }
+    #nav .fas {
+        display: block;
+    }
+
+    #nav ul {
+        display: none;
+    }
+    #nav ul.show {
+        display: block;
+    }
+    
+    #nav li {
+        display: block;
+    }
+    #nav li a {
+        margin: 0;
+        display: block;
+        background: rgba(15, 15, 15, 0.35);
+        text-decoration: none;
+        color: white;
+        padding: 1rem;
+        border-bottom: 1px solid white;
+    }
+    .fcontainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+@media screen and (min-width:1440px){
+    #nav {
+        font-size: 1.5rem;
+    }
+}
+@media screen and (min-width:2000px){
+    #nav {
+        font-size: 1.75rem;
+    }
+}
+@media screen and (min-width:2560px){
+    #nav {
+        font-size: 2rem;
+    }
+}
